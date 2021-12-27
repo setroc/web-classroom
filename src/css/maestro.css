@@ -1,0 +1,66 @@
+:root {
+    --negro: black;
+    --blanco: white;
+    --azul: #1a76a4;
+    --azul-transparente: #1a76a44a;
+    --azul-darken: #0c3a52;
+}
+/* navbar */
+nav.maestro {
+    padding: 0;
+}
+nav.maestro ul {
+    height: -webkit-fill-available;
+}
+nav.maestro ul li {
+    height: fit-content;
+}
+nav.maestro ul li p {
+    color: var(--blanco);
+    cursor: pointer;
+    padding: 20px;
+}
+
+nav.maestro ul .gestionar{
+    position: relative;
+}
+nav.maestro ul .gestionar .submenu{
+    position: absolute;
+    background-color: var(--azul);
+    top: 60px;
+    left: 10px;
+    display: none;
+}
+nav.maestro ul .gestionar:hover .submenu {
+    display: block;
+}
+nav.maestro ul .gestionar .submenu ul {
+    display: flex;
+    flex-direction: column;
+}
+nav.maestro ul .gestionar .submenu ul p {
+    padding: 20px;
+}
+nav.maestro ul .gestionar .submenu ul p:hover {
+    background-color: var(--azul-darken);
+}
+
+nav.maestro ul .gestionar .submenu .bloque {
+    position: relative;
+}
+nav.maestro ul .gestionar .submenu .bloque .submenudos {
+    position: absolute;
+    background-color: var(--azul);
+    top: 0px;
+    left: 103px;
+    display: none;
+}
+nav.maestro ul .gestionar .submenu .bloque:hover .submenudos {
+    display: block;
+}
+
+/* index */
+main.maestro {
+    display: grid;
+    grid-template-columns: 1fr;
+}
