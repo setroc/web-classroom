@@ -75,6 +75,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 <h2>Inicio de sesión</h2>
             </div>
             <form method="POST">
+                <?php foreach ($errores as $error) : ?>
+                    <div class="alerta error" style="margin-bottom: 10px;">
+                        <?php echo $error; ?>
+                    </div>
+                <?php endforeach; ?>
                 <label for="correo">Correo</label>
                 <input type="email" name="correo" id="correo" placeholder="correo@correo.com" required>
                 <label for="password">Contraseña</label>

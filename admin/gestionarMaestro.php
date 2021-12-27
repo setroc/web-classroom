@@ -10,12 +10,19 @@ $query = "SELECT * FROM profesor;";
 $resultado2 = mysqli_query($db, $query) or die(mysqli_error($db));
 // $query = "SELECT * FROM alumno;";
 // $resultado3 = mysqli_query($db, $query) or die(mysqli_error($db));
+// Validar la URL 
+$mensaje = $_GET['mensaje'] ?? null;
 
 ?>
 
     <main class="admin gestionar">
         <div class="principal">
             <h2>Gestionar Maestro</h2>
+            <?php
+                if ($mensaje == 1) {
+                    echo '<p class="alerta exito">Maestro Creado Correctamente</p>';
+                }
+            ?>
             <div class="informacion">
                 <table>
                     <tr>
@@ -41,9 +48,46 @@ $resultado2 = mysqli_query($db, $query) or die(mysqli_error($db));
                     <?php endwhile; ?>
                 </table>
             </div>
+            <div class="add" id="add">
+                +
+            </div>
+
+            <div class="modal none" id="modal">
+                <div class="contenido">
+                    <h2>Registrar Maestro</h2>
+                    <form  method="POST" action="agregarMaestro.php">
+                        <label for="nombre">Nombre:</label>
+                        <input value="" type="text" name="nombre" id="nombre">
+                        <label for="apellidoPaterno">Apellido Paterno:</label>
+                        <input value="" type="text" name="apellidoPaterno" id="apellidoPaterno">
+                        <label for="apellidoMaterno">Apellido Materno:</label>
+                        <input value="" type="text" name="apellidoMaterno" id="apellidoMaterno">
+                        <label for="correo">Correo:</label>
+                        <input value="" type="email" name="correo" id="correo">
+                        <label for="password">Contraseña:</label>
+                        <input value="" type="password" name="password" id="password">
+                        <label for="empleado">Número de Empleado:</label>
+                        <input value="" type="number" name="empleado" id="empleado">
+    
+                        <button style="margin: 15px 0;" type="submit">Agregar Maestro</button>
+                    </form>
+                </div>
+            </div>
         </div>
     </main>
-
+    <script>
+        const add = document.querySelector('#add');
+        const modal = document.querySelector('#modal');
+        add.addEventListener('click', ()=>{
+            if ( modal.classList.contains('none') ) {
+                modal.classList.remove('none');
+                add.textContent = 'x';
+            } else  {
+                modal.classList.add('none');
+                add.textContent = '+';
+            }
+        })
+    </script>
 <?php
 include "footer.php";
 ?>

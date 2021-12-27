@@ -15,7 +15,8 @@
         </div>
         <div class="titulo">
             <h1>Proyecto WEB</h1>
-            <p>Bienvenido, alumno</p>
+            <?php session_start(); ?>
+            <p>Bienvenido, <?php echo $_SESSION['nombre']; ?></p>
         </div>
     </header>
     <nav class="alumno">
@@ -79,24 +80,7 @@
                 <p>Ayuda</p>
             </li>
             <li>
-                <p>Salida</p>
+                <p><a href="/alumno/cerrarSesion.php">Salir</a></p>
             </li>
         </ul>
     </nav>
-
-    <main class="alumno">
-        <div class="principal">
-            <h2>¡Bienvenido Alumno!</h2>
-        </div>
-    </main>
-
-    <footer>
-        <div class="copyright">
-            <p>Copyright - 2021 Equipo 2</p>
-        </div>
-        <div class="contacto">
-            <p>correo@correo.com</p>
-        </div>
-    </footer> 
-</body>
-</html>
