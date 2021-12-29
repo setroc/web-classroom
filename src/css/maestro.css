@@ -15,7 +15,7 @@ nav.maestro ul {
 nav.maestro ul li {
     height: fit-content;
 }
-nav.maestro ul li p {
+nav.maestro ul li p{
     color: var(--blanco);
     cursor: pointer;
     padding: 20px;
@@ -30,6 +30,7 @@ nav.maestro ul .gestionar .submenu{
     top: 60px;
     left: 10px;
     display: none;
+    z-index: 1;
 }
 nav.maestro ul .gestionar:hover .submenu {
     display: block;
@@ -63,4 +64,80 @@ nav.maestro ul .gestionar .submenu .bloque:hover .submenudos {
 main.maestro {
     display: grid;
     grid-template-columns: 1fr;
+}
+/* libro */
+main.maestro.libro .principal iframe{
+    flex: 1;
+}
+
+/* gestionar */
+main.maestro.gestionar .informacion table {
+    margin: 0 auto;
+}
+main.maestro.gestionar .informacion table tr:nth-child(2n+1) {
+    background-color: var(--azul-transparente);
+}
+main.maestro.gestionar .informacion table tr:first-child {
+    background-color: var(--azul-darken);
+    color: var(--blanco);
+}
+main.maestro.gestionar .informacion table th,
+main.maestro.gestionar .informacion table td {
+    font-size: 1.6rem;
+    padding: 5px;
+}
+
+/* añadir */
+main.maestro.gestionar .principal {
+    position: relative;
+}
+main.maestro.gestionar .principal .add {
+    background-color: var(--azul);
+    position: absolute;
+    font-size: 3rem;
+    color: var(--blanco);
+    font-weight: bold;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 50%;
+    bottom: 10px;
+    right: 10px;
+    z-index: 2;
+}
+/* modal */
+.modal {
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    z-index: 1;
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    top: 0;
+    left: 0;
+}
+.none {
+    display: none;
+}
+.modal .contenido {
+    width: 700px;
+    height: 500px;
+    background-color: var(--blanco);
+    padding: 20px;
+    overflow-y: scroll;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.modal .contenido form {
+    display: flex;
+    flex-direction: column;
+}
+/* actualizacion perfil */
+main.maestro.actualizacion .principal form {
+    display: flex;
+    flex-direction: column;
+}
+main.maestro.actualizacion .principal form button {
+    margin-bottom: 20px;
 }

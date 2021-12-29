@@ -41,7 +41,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 session_start();
                 $_SESSION['nombre']  = $row['nombre'];
                 $_SESSION['correo']  = $correo;
-                header("Location: /profesor/index.php");
+                header("Location: /maestro/index.php");
                 die();
             } else {
                 $errores[] = 'Contraseña o correo incorrecto';
