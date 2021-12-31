@@ -1,6 +1,6 @@
 <?php
 
-    include "../src/php/conectarDB.php";
+    include "../../src/php/conectarDB.php";
     $db = conectarDb();
 
     // echo "<pre>";
