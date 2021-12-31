@@ -38,7 +38,7 @@ $id = $_GET['id'] ?? null;
                             <?php echo "<td> ${tema['idTema']}</td>"; ?>
                             <?php echo "<td> ${tema['nombre']}</td>"; ?>
                             <td style="text-align: center; cursor: pointer;"><a href="/maestro/bloqueUno.php?id=<?php echo $tema['idTema'];?>">✏️</a></td>
-                            <td style="text-align: center; cursor: pointer;"><a href="/maestro/eliminarTema.php?id=<?php echo $tema['idTema'];?>">❌</a></td>
+                            <td style="text-align: center; cursor: pointer;"><a href="/maestro/temas/eliminarTema.php?id=<?php echo $tema['idTema'];?>">❌</a></td>
                         </tr>
                     <?php endwhile; ?>
                 </table>
@@ -50,7 +50,7 @@ $id = $_GET['id'] ?? null;
             <div class="modal none" id="modal">
                 <div class="contenido">
                     <h2>Registrar Tema</h2>
-                    <form  method="POST" action="agregarTema.php">
+                    <form  method="POST" action="/maestro/temas/agregarTema.php">
                         <label for="nombre">Nombre del tema:</label>
                         <input value="" type="text" name="nombre" id="nombre" required>
 
@@ -61,7 +61,7 @@ $id = $_GET['id'] ?? null;
             <div class="modal <?php if(!$id) echo 'none'; ?>" id="modal">
                 <div class="contenido">
                     <h2>Editar Tema</h2>
-                    <form  method="POST" action="editarTema.php?id=<?php echo $id; ?>">
+                    <form  method="POST" action="/maestro/temas/editarTema.php?id=<?php echo $id; ?>">
                         <?php 
                         $query = "SELECT nombre from tema WHERE idTema = '$id'";
                         $resultado2 = mysqli_query($db, $query) or die(mysqli_error($db));

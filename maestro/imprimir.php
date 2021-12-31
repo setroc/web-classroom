@@ -43,7 +43,7 @@ $resultado2 = mysqli_query($db, $query) or die(mysqli_error($db));
                             <td><a href="<?php echo $material['archivo']; ?>"><?php echo $material['archivo']; ?></a></td>
                             <td><?php echo $material['tema']; ?></td>
                             <td style="text-align: center; cursor: pointer;"><a href="/maestro/imprimir.php?id=<?php echo $material['idMaterial'];?>">✏️</a></td>
-                            <td style="text-align: center; cursor: pointer;"><a href="/maestro/eliminarImprimir.php?id=<?php echo $material['idMaterial'];?>">❌</a></td>
+                            <td style="text-align: center; cursor: pointer;"><a href="/maestro/imprimir/eliminarImprimir.php?id=<?php echo $material['idMaterial'];?>">❌</a></td>
                         </tr>
                     <?php endwhile; ?>
                 </table>
@@ -55,7 +55,7 @@ $resultado2 = mysqli_query($db, $query) or die(mysqli_error($db));
             <div class="modal none" id="modal">
                 <div class="contenido">
                     <h2>Registrar Material para Imprimir</h2>
-                    <form  method="POST" action="agregarImprimir.php">
+                    <form  method="POST" action="/maestro/imprimir/agregarImprimir.php">
                         <label for="nombre">Nombre del Material:</label>
                         <input value="" type="text" name="nombre" id="nombre" required>
                         <label for="archivo">URL del Material:</label>
@@ -76,7 +76,7 @@ $resultado2 = mysqli_query($db, $query) or die(mysqli_error($db));
             <div class="modal <?php if(!$id) echo 'none'; ?>" id="modal">
                 <div class="contenido">
                     <h2>Editar Material para Imprimir</h2>
-                    <form  method="POST" action="editarImprimir.php?id=<?php echo $id; ?>">
+                    <form  method="POST" action="/maestro/imprimir/editarImprimir.php?id=<?php echo $id; ?>">
                         <?php 
                         $query = "SELECT nombre, archivo from material WHERE idMaterial = '$id'";
                         $resultado = mysqli_query($db, $query) or die(mysqli_error($db));
