@@ -42,7 +42,7 @@
                                         <p><a href="/maestro/imprimir.php">Material para imprimir</a></p>
                                     </li>
                                     <li>
-                                        <p>Actividad en línea</p>
+                                        <p><a href="/maestro/actividad.php">Actividad en Línea</a></p>
                                     </li>
                                     <li>
                                         <p>Examen</p>
