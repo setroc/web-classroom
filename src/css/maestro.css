@@ -104,6 +104,10 @@ main.maestro.gestionar .principal .add {
     right: 10px;
     z-index: 2;
 }
+main.maestro.gestionar .principal .add a {
+    color: var(--blanco);
+    font-size: 3rem;
+}
 /* modal */
 .modal {
     width: 100%;
