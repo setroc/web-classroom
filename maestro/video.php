@@ -3,7 +3,7 @@ include "header.php";
 
 require '../src/php/conectarDB.php';
 $db = conectarDb();
-$query = "SELECT a.idMaterial, a.nombre, a.archivo, b.nombre AS tema FROM material AS a JOIN tema AS b ON a.tema_idTema = b.idTema; ";
+$query = "SELECT a.idMaterial, a.nombre, a.archivo, b.nombre AS tema FROM material AS a JOIN tema AS b ON a.tema_idTema = b.idTema WHERE a.tipo=1; ";
 $resultado = mysqli_query($db, $query) or die(mysqli_error($db));
 
 $query = "SELECT * from tema;";
@@ -95,11 +95,6 @@ $id = $_GET['id'] ?? null;
 
                             <button style="margin: 15px 0;" type="submit">Editar Video</button>
                         <?php endwhile; ?>
-
-                        <!-- echo '<input value="'.$val['nombre'].'" type="text" name="nombre" id="nombre" required>';
-                        endwhile;
-                        echo '<button style="margin: 15px 0;" type="submit">Editar Tema</button>';
-                        ?> -->
                     </form>
                 </div>
             </div>

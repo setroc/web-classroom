@@ -8,8 +8,8 @@
     // echo "</pre>";
     
     //validar
-    // $errores = [];
-    $id = $_GET['id'] ?? null;
+    $errores = [];
+
     $nombre='';
     $archivo='';
     $tema='';
@@ -30,11 +30,11 @@
         }
         // El array de errores esta vacio
         if (empty($errores)) {
-            $query = "UPDATE material SET nombre='${nombre}', archivo='${archivo}', tema_idTema='${tema}' WHERE idMaterial = '${id}'";
+            $query = "INSERT INTO material (nombre, archivo, tipo, tema_idTema) VALUES ('$nombre', '$archivo', '2', '$tema')";
             echo $query;
             $resultado = mysqli_query($db, $query) or die(mysqli_error($db));
             if ($resultado) {
-                header('location: /maestro/video.php?mensaje=2');
+                header('location: /maestro/imprimir.php?mensaje=1');
             }
         }
     }
