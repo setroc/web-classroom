@@ -6,12 +6,7 @@ include "header.php";
             <h2>Acerca de nosotros</h2>
             <p> Realizado por:</p>
             <ul>
-                <li>nombre</li>
-                <li>nombre</li>
-                <li>nombre</li>
-                <li>nombre</li>
-                <li>nombre</li>
-                <li>nombre</li>
+                <li>Isaac Godínez Cortés</li>
             </ul>
         </div>
         <?php

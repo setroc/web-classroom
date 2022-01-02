@@ -59,6 +59,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 session_start();
                 $_SESSION['nombre']  = $row['nombre'];
                 $_SESSION['correo']  = $correo;
+                $_SESSION['id']  = $row['idAlumno'];
                 header("Location: /alumno/index.php");
                 die();
             } else {

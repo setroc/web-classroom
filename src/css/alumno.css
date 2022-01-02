@@ -64,3 +64,32 @@ main.alumno {
     display: grid;
     grid-template-columns: 1fr;
 }
+
+/* gestionar */
+main.alumno.gestionar .informacion table {
+    margin: 0 auto;
+}
+main.alumno.gestionar .informacion table tr:nth-child(2n+1) {
+    background-color: var(--azul-transparente);
+}
+main.alumno.gestionar .informacion table tr:first-child {
+    background-color: var(--azul-darken);
+    color: var(--blanco);
+}
+main.alumno.gestionar .informacion table th,
+main.alumno.gestionar .informacion table td {
+    font-size: 1.6rem;
+    padding: 5px;
+}
+/* libro */
+main.alumno.libro .principal iframe{
+    flex: 1;
+}
+/* actualizacion perfil */
+main.alumno.actualizacion .principal form {
+    display: flex;
+    flex-direction: column;
+}
+main.alumno.actualizacion .principal form button {
+    margin-bottom: 20px;
+}

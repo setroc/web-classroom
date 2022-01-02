@@ -44,9 +44,9 @@
                                     <li>
                                         <p><a href="/maestro/actividad.php">Actividad en Línea</a></p>
                                     </li>
-                                    <li>
+                                    <!-- <li>
                                         <p>Examen</p>
-                                    </li>
+                                    </li> -->
                                     <li>
                                         <p><a href="/maestro/gestionarLibro.php">Libro</a></p>
                                     </li>
