@@ -48,21 +48,21 @@
                 <div class="submenu">
                     <ul>
                         <li class="bloque">
-                            <p>Bloque 1</p>
+                            <p><a href="/admin/bloqueUno.php">Bloque 1</a></p>
                             <div class="submenudos">
                                 <ul>
                                     <li>
-                                        <p>Video</p>
+                                        <p><a href="/admin/video.php">Video</a></p>
                                     </li>
                                     <li>
-                                        <p>Material para imprimir</p>
+                                        <p><a href="/admin/imprimir.php">Material para imprimir</a></p>
                                     </li>
                                     <li>
-                                        <p>Actividad en línea</p>
+                                        <p><a href="/admin/actividad.php">Actividad en línea</a></p>
                                     </li>
-                                    <li>
+                                    <!-- <li>
                                         <p>Examen</p>
-                                    </li>
+                                    </li> -->
                                     <li>
                                         <p><a href="/admin/gestionarLibro.php">Libro</a></p>
                                     </li>

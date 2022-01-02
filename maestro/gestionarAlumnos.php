@@ -30,7 +30,8 @@ $resultado3 = mysqli_query($db, $query) or die(mysqli_error($db));
                     <?php while( $alumno = mysqli_fetch_assoc($resultado3) ): ?>
                         <tr>
                             <?php echo "<td> ${alumno['idAlumno']} </td>"; ?>
-                            <?php echo "<td> ${alumno['nombre']} ${alumno['apellidoPaterno']} ${alumno['apellidoMaterno']}</td>"; ?>
+                            <td><a href="/maestro/gestionar/alumno.php?id=<?php echo $alumno['idAlumno']; ?>"><?php echo $alumno['nombre']." ".$alumno['apellidoPaterno']." ".$alumno['apellidoMaterno'];?></a></td>
+                            <!-- <?php echo "<td> ${alumno['nombre']} ${alumno['apellidoPaterno']} ${alumno['apellidoMaterno']}</td>"; ?> -->
                             <?php echo "<td> ${alumno['correo']}</td>"; ?>
                             <?php echo "<td> ${alumno['correoSecundario']}</td>"; ?>
                             <?php echo "<td> ${alumno['telefono']} </td>"; ?>
