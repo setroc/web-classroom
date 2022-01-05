@@ -22,7 +22,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 session_start();
                 $_SESSION['nombre']  = $row['nombre'];
                 $_SESSION['correo']  = $correo;
-                header("Location: ./admin/index.php");
+                header("location: /admin/index.php");
                 die();
             } else {
                 $errores[] = 'Contraseña o correo incorrecto';
@@ -41,7 +41,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 session_start();
                 $_SESSION['nombre']  = $row['nombre'];
                 $_SESSION['correo']  = $correo;
-                header("Location: ./maestro/index.php");
+                header("location: /maestro/index.php");
                 die();
             } else {
                 $errores[] = 'Contraseña o correo incorrecto';
@@ -60,7 +60,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 $_SESSION['nombre']  = $row['nombre'];
                 $_SESSION['correo']  = $correo;
                 $_SESSION['id']  = $row['idAlumno'];
-                header("Location: ./alumno/index.php");
+                header("location: /alumno/index.php");
                 die();
             } else {
                 $errores[] = 'Contraseña o correo incorrecto';

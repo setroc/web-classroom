@@ -34,7 +34,7 @@
             echo $query;
             $resultado = mysqli_query($db, $query) or die(mysqli_error($db));
             if ($resultado) {
-                header('location: ./maestro/imprimir.php?mensaje=2');
+                header('location: /maestro/imprimir.php?mensaje=2');
             }
         }
     }

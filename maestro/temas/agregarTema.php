@@ -24,7 +24,7 @@
             echo $query;
             $resultado = mysqli_query($db, $query) or die(mysqli_error($db));
             if ($resultado) {
-                header('location: ./maestro/bloqueUno.php?mensaje=1');
+                header('location: /maestro/bloqueUno.php?mensaje=1');
             }
         }
     }
