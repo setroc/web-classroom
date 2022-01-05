@@ -39,15 +39,15 @@ $mensaje = $_GET['mensaje'] ?? null;
                             <td><?php echo $ejercicio['idEjercicio']; ?></td>
                             <td><?php echo $ejercicio['pregunta']; ?></td>
                             <td><?php echo $ejercicio['tema']; ?></td>
-                            <!-- <td style="text-align: center; cursor: pointer;"><a href="/maestro/actividad.php?id=<?php echo $ejercicio['idEjercicio'];?>">✏️</a></td> -->
-                            <td style="text-align: center; cursor: pointer;"><a href="/maestro/actividades/eliminarActividad.php?id=<?php echo $ejercicio['idEjercicio'];?>">❌</a></td>
+                            <!-- <td style="text-align: center; cursor: pointer;"><a href="./maestro/actividad.php?id=<?php echo $ejercicio['idEjercicio'];?>">✏️</a></td> -->
+                            <td style="text-align: center; cursor: pointer;"><a href="../maestro/actividades/eliminarActividad.php?id=<?php echo $ejercicio['idEjercicio'];?>">❌</a></td>
                         </tr>
                     <?php endwhile; ?>
                 </table>
             </div>
             
             <div class="add <?php if($id) echo 'none'; ?>" id="add">
-                <a href="/maestro/actividades/nuevaActividad.php">+</a>
+                <a href="../maestro/actividades/nuevaActividad.php">+</a>
             </div>
 
         </div>

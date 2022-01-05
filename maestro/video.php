@@ -40,8 +40,8 @@ $id = $_GET['id'] ?? null;
                             <?php echo "<td> ${material['nombre']}</td>"; ?>
                             <?php echo "<td><a href=".$material['archivo']."> ${material['archivo']} </a></td>"; ?>
                             <?php echo "<td> ${material['tema']}</td>"; ?>
-                            <td style="text-align: center; cursor: pointer;"><a href="/maestro/video.php?id=<?php echo $material['idMaterial'];?>">✏️</a></td>
-                            <td style="text-align: center; cursor: pointer;"><a href="/maestro/videos/eliminarVideo.php?id=<?php echo $material['idMaterial'];?>">❌</a></td>
+                            <td style="text-align: center; cursor: pointer;"><a href="./maestro/video.php?id=<?php echo $material['idMaterial'];?>">✏️</a></td>
+                            <td style="text-align: center; cursor: pointer;"><a href="./maestro/videos/eliminarVideo.php?id=<?php echo $material['idMaterial'];?>">❌</a></td>
                         </tr>
                     <?php endwhile; ?>
                 </table>
@@ -53,7 +53,7 @@ $id = $_GET['id'] ?? null;
             <div class="modal none" id="modal">
                 <div class="contenido">
                     <h2>Registrar Video</h2>
-                    <form  method="POST" action="/maestro/videos/agregarVideo.php">
+                    <form  method="POST" action="./maestro/videos/agregarVideo.php">
                         <label for="nombre">Nombre del video:</label>
                         <input value="" type="text" name="nombre" id="nombre" required>
                         <label for="archivo">URL del video:</label>
@@ -74,7 +74,7 @@ $id = $_GET['id'] ?? null;
             <div class="modal <?php if(!$id) echo 'none'; ?>" id="modal">
                 <div class="contenido">
                     <h2>Editar Video</h2>
-                    <form  method="POST" action="/maestro/videos/editarVideo.php?id=<?php echo $id; ?>">
+                    <form  method="POST" action="./maestro/videos/editarVideo.php?id=<?php echo $id; ?>">
                         <?php 
                         $query = "SELECT nombre, archivo from material WHERE idMaterial = '$id'";
                         $resultado = mysqli_query($db, $query) or die(mysqli_error($db));

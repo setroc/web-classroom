@@ -21,7 +21,7 @@ $resultado = mysqli_query($db, $query) or die(mysqli_error($db));
                         <tr>
                             <td><?php echo $ejercicio['idEjercicio']; ?></td>
                             <td><?php echo $ejercicio['tema']; ?></td>
-                            <td><a href="/alumno/actividades/actividad.php?id=<?php echo $ejercicio['idEjercicio']; ?>"><?php echo $ejercicio['pregunta']; ?></a></td>
+                            <td><a href="./alumno/actividades/actividad.php?id=<?php echo $ejercicio['idEjercicio']; ?>"><?php echo $ejercicio['pregunta']; ?></a></td>
                         </tr>
                     <?php endwhile; ?>
                 </table>

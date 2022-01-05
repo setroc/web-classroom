@@ -22,7 +22,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 session_start();
                 $_SESSION['nombre']  = $row['nombre'];
                 $_SESSION['correo']  = $correo;
-                header("Location: /admin/index.php");
+                header("Location: ./admin/index.php");
                 die();
             } else {
                 $errores[] = 'Contraseña o correo incorrecto';
@@ -41,7 +41,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 session_start();
                 $_SESSION['nombre']  = $row['nombre'];
                 $_SESSION['correo']  = $correo;
-                header("Location: /maestro/index.php");
+                header("Location: ./maestro/index.php");
                 die();
             } else {
                 $errores[] = 'Contraseña o correo incorrecto';
@@ -60,7 +60,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 $_SESSION['nombre']  = $row['nombre'];
                 $_SESSION['correo']  = $correo;
                 $_SESSION['id']  = $row['idAlumno'];
-                header("Location: /alumno/index.php");
+                header("Location: ./alumno/index.php");
                 die();
             } else {
                 $errores[] = 'Contraseña o correo incorrecto';
@@ -94,7 +94,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 <button type="submit">Iniciar sesión</button>
             </form>
             <div class="informacion">
-                <p><a href="/registro.php">Registrarse</a></p>
+                <p><a href="./registro.php">Registrarse</a></p>
                 <p><a href="#">¿Se te olvido la contraseña?</a></p>
                 <p id="fecha">06/12/2021 19:35</p>
             </div>

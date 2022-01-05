@@ -18,10 +18,10 @@
     </header>
     <nav class="noLoggeado">
         <ul>
-            <li><a href="/index.php">Principal</a></li>
-            <li><a href="/acerca.php">Acerca de</a></li>
-            <li><a href="/preguntas.php">Preguntas frecuentes</a></li>
-            <li><a href="/contacto.php">Contacto</a></li>
-            <li><a href="/ayuda.php">Ayuda</a></li>
+            <li><a href="./index.php">Principal</a></li>
+            <li><a href="./acerca.php">Acerca de</a></li>
+            <li><a href="./preguntas.php">Preguntas frecuentes</a></li>
+            <li><a href="./contacto.php">Contacto</a></li>
+            <li><a href="./ayuda.php">Ayuda</a></li>
         </ul>
     </nav>

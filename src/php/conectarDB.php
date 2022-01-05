@@ -1,6 +1,6 @@
 <?php
 function conectarDb(): mysqli {
-    $db = mysqli_connect('localhost', 'root', '', 'proyecto');
+    $db = mysqli_connect('localhost', 'root', '', 'classroom-igc');
 
     if (!$db) {
         echo "Error: No se pudo conectar a MySQL.";

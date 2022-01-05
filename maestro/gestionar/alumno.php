@@ -119,7 +119,7 @@
     ?>
     <header>
         <div class="logo">
-            <a href="/maestro/index.php">
+            <a href="./maestro/index.php">
                 <img src="/src/assets/escudoESCOM.png" alt="Logo">
             </a>
         </div>

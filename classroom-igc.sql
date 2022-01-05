@@ -18,6 +18,8 @@
 --
 -- Table structure for table `administrador`
 --
+CREATE SCHEMA IF NOT EXISTS `classroom-igc` DEFAULT CHARACTER SET utf8 ;
+USE `classroom-igc` ;
 
 DROP TABLE IF EXISTS `administrador`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
@@ -132,6 +134,35 @@ INSERT INTO `curso` VALUES (1,'matemáticas');
 /*!40000 ALTER TABLE `curso` ENABLE KEYS */;
 UNLOCK TABLES;
 
+
+--
+-- Table structure for table `tema`
+--
+
+DROP TABLE IF EXISTS `tema`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `tema` (
+  `idTema` int NOT NULL AUTO_INCREMENT,
+  `nombre` varchar(45) NOT NULL,
+  `curso_idCurso` int NOT NULL,
+  PRIMARY KEY (`idTema`),
+  KEY `fk_tema_curso1_idx` (`curso_idCurso`),
+  CONSTRAINT `fk_tema_curso1` FOREIGN KEY (`curso_idCurso`) REFERENCES `curso` (`idCurso`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb3;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `tema`
+--
+
+LOCK TABLES `tema` WRITE;
+/*!40000 ALTER TABLE `tema` DISABLE KEYS */;
+insert into tema (idTema,nombre, curso_idCurso) values (1,'Decenas', 1);
+/*!40000 ALTER TABLE `tema` ENABLE KEYS */;
+UNLOCK TABLES;
+/*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
+
 --
 -- Table structure for table `ejercicio`
 --
@@ -219,32 +250,6 @@ LOCK TABLES `profesor` WRITE;
 /*!40000 ALTER TABLE `profesor` ENABLE KEYS */;
 UNLOCK TABLES;
 
---
--- Table structure for table `tema`
---
-
-DROP TABLE IF EXISTS `tema`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!50503 SET character_set_client = utf8mb4 */;
-CREATE TABLE `tema` (
-  `idTema` int NOT NULL AUTO_INCREMENT,
-  `nombre` varchar(45) NOT NULL,
-  `curso_idCurso` int NOT NULL,
-  PRIMARY KEY (`idTema`),
-  KEY `fk_tema_curso1_idx` (`curso_idCurso`),
-  CONSTRAINT `fk_tema_curso1` FOREIGN KEY (`curso_idCurso`) REFERENCES `curso` (`idCurso`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb3;
-/*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `tema`
---
-
-LOCK TABLES `tema` WRITE;
-/*!40000 ALTER TABLE `tema` DISABLE KEYS */;
-/*!40000 ALTER TABLE `tema` ENABLE KEYS */;
-UNLOCK TABLES;
-/*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
 /*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;

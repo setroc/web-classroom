@@ -34,7 +34,7 @@ if ($id) {
 
     $res = mysqli_query($db, $query) or die(mysqli_error($db));
     if ($res) {
-        header('location: /alumno/actividad.php?mensaje=1');
+        header('location: ./alumno/actividad.php?mensaje=1');
     }
 }
 

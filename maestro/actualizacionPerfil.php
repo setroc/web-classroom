@@ -54,7 +54,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         echo $query;
         $resultado2 = mysqli_query($db, $query) or die(mysqli_error($db));
         if ($resultado) {
-            header('location: /maestro/actualizacionPerfil.php?mensaje=1');
+            header('location: ./maestro/actualizacionPerfil.php?mensaje=1');
         }
     }
 }
